@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="REST Project 1" resourceRoot="" soapui-version="4.6.1" xmlns:con="http://eviware.com/soapui/config">
+	<con:settings/>
+	<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		<con:definitionCache/>
+		<con:endpoints>
+			<con:endpoint>http://localhost:8080</con:endpoint>
+		</con:endpoints>
+		<con:resource name="Tables" path="/rjm/tables">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Tables" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:request name="Request 1" mediaType="application/json">
+					<con:settings/>
+					<con:endpoint>http://localhost:8080</con:endpoint>
+					<con:request/>
+					<con:credentials>
+						<con:authType>Global HTTP Settings</con:authType>
+					</con:credentials>
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
+				</con:request>
+			</con:method>
+		</con:resource>
+	</con:interface>
+	<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="GetAllTables" type="rest" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		<con:definitionCache/>
+		<con:endpoints>
+			<con:endpoint>http://localhost:8080</con:endpoint>
+		</con:endpoints>
+		<con:resource name="tables" path="/rjm/tables">
+			<con:settings/>
+			<con:parameters/>
+			<con:method name="Method 1" method="GET">
+				<con:settings/>
+				<con:parameters/>
+				<con:representation type="RESPONSE">
+					<con:mediaType>application/json</con:mediaType>
+					<con:status>200</con:status>
+					<con:params/>
+					<con:element>Response</con:element>
+				</con:representation>
+				<con:request name="Request 1" mediaType="application/json">
+					<con:settings>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+			</con:settings>
+			<con:endpoint>http://localhost:8080</con:endpoint>
+			<con:request/>
+			<con:credentials>
+				<con:authType>Global HTTP Settings</con:authType>
+			</con:credentials>
+			<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+			<con:jmsPropertyConfig/>
+			<con:parameters/>
+		</con:request>
+	</con:method>
+</con:resource>
+</con:interface>
+<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="GetEmployeeTable" type="rest" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<con:settings/>
+	<con:definitionCache type="TEXT" rootPart=""/>
+	<con:endpoints>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+	</con:endpoints>
+	<con:resource name="employee" path="/rjm/tables/employee">
+		<con:settings/>
+		<con:parameters/>
+		<con:method name="Method 1" method="GET">
+			<con:settings/>
+			<con:parameters/>
+			<con:representation type="RESPONSE">
+				<con:mediaType>application/json</con:mediaType>
+				<con:status>200</con:status>
+				<con:params/>
+				<con:element xmlns:emp="http://localhost/rjm/tables/employee">emp:Response</con:element>
+			</con:representation>
+			<con:request name="Request 1" mediaType="application/json">
+				<con:settings>
+					<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+		</con:settings>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+		<con:request/>
+		<con:credentials>
+			<con:authType>Global HTTP Settings</con:authType>
+		</con:credentials>
+		<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+		<con:jmsPropertyConfig/>
+		<con:parameters/>
+	</con:request>
+</con:method>
+</con:resource>
+</con:interface>
+<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="CreateEmployeeTable" type="rest" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<con:settings/>
+	<con:definitionCache type="TEXT" rootPart=""/>
+	<con:endpoints>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+	</con:endpoints>
+	<con:resource name="employee" path="/rjm/tables/employee">
+		<con:settings/>
+		<con:parameters/>
+		<con:method name="Method 1" method="POST">
+			<con:settings/>
+			<con:parameters/>
+			<con:representation type="REQUEST">
+				<con:mediaType>application/json</con:mediaType>
+				<con:params/>
+			</con:representation>
+			<con:representation type="RESPONSE">
+				<con:mediaType>application/json</con:mediaType>
+				<con:status>200</con:status>
+				<con:params/>
+				<con:element xmlns:emp="http://localhost/rjm/tables/employee">emp:Response</con:element>
+			</con:representation>
+			<con:request name="Request 1" mediaType="application/json" postQueryString="false">
+				<con:settings>
+					<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+		</con:settings>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+		<con:request>{"id":"243392","name":"Hussain R","education":"BE"}</con:request>
+		<con:credentials>
+			<con:authType>Global HTTP Settings</con:authType>
+		</con:credentials>
+		<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+		<con:jmsPropertyConfig/>
+		<con:parameters/>
+	</con:request>
+</con:method>
+</con:resource>
+</con:interface>
+<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="GetEmployeeTableKey" type="rest" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<con:settings/>
+	<con:definitionCache/>
+	<con:endpoints>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+	</con:endpoints>
+	<con:resource name="name" path="/rjm/tables/employee/name">
+		<con:settings/>
+		<con:parameters/>
+		<con:method name="Method 1" method="GET">
+			<con:settings/>
+			<con:parameters/>
+			<con:representation type="RESPONSE">
+				<con:mediaType>application/json</con:mediaType>
+				<con:status>200</con:status>
+				<con:params/>
+			</con:representation>
+			<con:request name="Request 1" mediaType="application/json">
+				<con:settings>
+					<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+		</con:settings>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+		<con:request/>
+		<con:credentials>
+			<con:authType>Global HTTP Settings</con:authType>
+		</con:credentials>
+		<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+		<con:jmsPropertyConfig/>
+		<con:parameters/>
+	</con:request>
+</con:method>
+</con:resource>
+</con:interface>
+<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="InsertKeyInEmployeeTable" type="rest" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<con:settings/>
+	<con:definitionCache/>
+	<con:endpoints>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+	</con:endpoints>
+	<con:resource name="skills" path="/rjm/tables/employee/skills">
+		<con:settings/>
+		<con:parameters/>
+		<con:method name="Method 1" method="PUT">
+			<con:settings/>
+			<con:parameters/>
+			<con:representation type="RESPONSE">
+				<con:mediaType>application/json</con:mediaType>
+				<con:status>200</con:status>
+				<con:params/>
+			</con:representation>
+			<con:representation type="REQUEST">
+				<con:mediaType>application/json</con:mediaType>
+				<con:params/>
+			</con:representation>
+			<con:request name="Request 1" mediaType="application/json" postQueryString="false">
+				<con:settings>
+					<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+		</con:settings>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+		<con:request>{"Java,"J2ee","Javascript"}</con:request>
+		<con:credentials>
+			<con:authType>Global HTTP Settings</con:authType>
+		</con:credentials>
+		<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+		<con:jmsPropertyConfig/>
+		<con:parameters/>
+	</con:request>
+</con:method>
+</con:resource>
+</con:interface>
+<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="DeleteEmployeeTable" type="rest" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<con:settings/>
+	<con:definitionCache/>
+	<con:endpoints>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+	</con:endpoints>
+	<con:resource name="employee" path="/rjm/tables/employee">
+		<con:settings/>
+		<con:parameters/>
+		<con:method name="Method 1" method="DELETE">
+			<con:settings/>
+			<con:parameters/>
+			<con:request name="Request 1" mediaType="application/json">
+				<con:settings/>
+				<con:endpoint>http://localhost:8080</con:endpoint>
+				<con:request/>
+				<con:credentials>
+					<con:authType>Global HTTP Settings</con:authType>
+				</con:credentials>
+				<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+				<con:jmsPropertyConfig/>
+				<con:parameters/>
+			</con:request>
+		</con:method>
+	</con:resource>
+</con:interface>
+<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="DeleteAllTables" type="rest" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<con:settings/>
+	<con:definitionCache/>
+	<con:endpoints>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+	</con:endpoints>
+	<con:resource name="tables" path="/rjm/tables">
+		<con:settings/>
+		<con:parameters/>
+		<con:method name="Method 1" method="DELETE">
+			<con:settings/>
+			<con:parameters/>
+			<con:representation type="RESPONSE">
+				<con:mediaType>application/json</con:mediaType>
+				<con:status>200</con:status>
+				<con:params/>
+				<con:element xmlns:tab="http://localhost/rjm/tables">tab:Response</con:element>
+			</con:representation>
+			<con:request name="Request 1" mediaType="application/json">
+				<con:settings>
+					<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+		</con:settings>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+		<con:request/>
+		<con:credentials>
+			<con:authType>Global HTTP Settings</con:authType>
+		</con:credentials>
+		<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+		<con:jmsPropertyConfig/>
+		<con:parameters/>
+	</con:request>
+</con:method>
+</con:resource>
+</con:interface>
+<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="DeleteKeyInEmployeeTable" type="rest" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<con:settings/>
+	<con:definitionCache/>
+	<con:endpoints>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+	</con:endpoints>
+	<con:resource name="education" path="/rjm/tables/employee/education">
+		<con:settings/>
+		<con:parameters/>
+		<con:method name="Method 1" method="DELETE">
+			<con:settings/>
+			<con:parameters/>
+			<con:representation type="RESPONSE">
+				<con:mediaType>application/json</con:mediaType>
+				<con:status>200</con:status>
+				<con:params/>
+				<con:element xmlns:educ="http://localhost/rjm/tables/employee/education">educ:Response</con:element>
+			</con:representation>
+			<con:request name="Request 1" mediaType="application/json">
+				<con:settings>
+					<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+		</con:settings>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+		<con:request/>
+		<con:credentials>
+			<con:authType>Global HTTP Settings</con:authType>
+		</con:credentials>
+		<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+		<con:jmsPropertyConfig/>
+		<con:parameters/>
+	</con:request>
+</con:method>
+</con:resource>
+</con:interface>
+<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="SearchInAllTables" type="rest" basePath="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<con:settings/>
+	<con:definitionCache/>
+	<con:endpoints>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+	</con:endpoints>
+	<con:resource name="search" path="/rjm/tables/search">
+		<con:settings/>
+		<con:parameters>
+			<con:parameter>
+				<con:name>q</con:name>
+				<con:value>name</con:value>
+				<con:style>QUERY</con:style>
+				<con:default>name</con:default>
+				<con:path xsi:nil="true"/>
+				<con:description xsi:nil="true"/>
+			</con:parameter>
+		</con:parameters>
+		<con:method name="Method 1" method="GET">
+			<con:settings/>
+			<con:parameters/>
+			<con:representation type="RESPONSE">
+				<con:mediaType>application/json</con:mediaType>
+				<con:status>200</con:status>
+				<con:params/>
+				<con:element>Response</con:element>
+			</con:representation>
+			<con:request name="Request 1" mediaType="application/json">
+				<con:settings>
+					<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+		</con:settings>
+		<con:endpoint>http://localhost:8080</con:endpoint>
+		<con:request/>
+		<con:credentials>
+			<con:authType>Global HTTP Settings</con:authType>
+		</con:credentials>
+		<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+		<con:jmsPropertyConfig/>
+		<con:parameters/>
+	</con:request>
+</con:method>
+</con:resource>
+</con:interface>
+<con:properties/>
+<con:wssContainer/>
+</con:soapui-project>

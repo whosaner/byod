@@ -2,11 +2,12 @@
    mvn clean install -DskipTests
 2. There are some Java8 API;s being used in the application which needs JDK1.8 on the classpath. Also, I tested the application with Tomcat 8.0.12 (since Tomcat 7 is not very friendly with Java8).
 3. Deploy the war to any web container (especially Tomcat 8.0.12).
-
-4. The context root of the web application is "rjm".
-5. Once deployed the URL of the application for all the functionality will be 
+4. Please create the following directory structure (In *nix based environment - /rjm/byodb, In Windows based env - C:/rjm/byodb)
+5. The context root of the web application is "rjm".
+6. Once deployed the URL of the application for all the functionality will be 
     http://<HOST_NAME>:<PORT_NUM>/rjm/tables/<table|key|search?q=key>
- 
+7. For POST & PUT request's, please make sure to set Content-Type header to application/json.
+8. I have included a SOAP-UI project.xml. If you just import that in your SOAP-UI and change the hostname and port number, everything should work.
 
 Design:
 1. The application is designed to persist the data in the underlying files. The location of the db files in *nix based system would be /rjm/byodb.
@@ -15,6 +16,3 @@ Design:
 
 Assumptions :
 1. The data passed in the REQUEST body of the POST method should always be in the form of a Json Map. for instance {"key":"value"} . It can be of type array like [{"key":"value"}]
-
-
-
