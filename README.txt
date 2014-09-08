@@ -15,4 +15,4 @@ Design:
 3. The above design is memory intensive, since everything is stored in memory. This might cause problems when the data in the file grows large (> MBS). IN such scenarios,we can stream the data in real time, rather than storing the entire data in memory.
 
 Assumptions :
-1. The data passed in the REQUEST body of the POST method should always be in the form of a Json Map. for instance {"key":"value"} . It can be of type array like [{"key":"value"}]
+1. The data passed in the REQUEST body of the POST method should always be in the form of a Json Map. for instance {"key":"value"} . It cannot be of type array like [{"key":"value"}]
